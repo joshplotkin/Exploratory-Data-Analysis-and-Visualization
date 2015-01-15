@@ -70,15 +70,15 @@ The code at the bottom (and in the rar file) will take all those csv files, proc
 
 The main focus will be on player age, and so I think a logical place to start is looking at the breakdown of players by age. 
 
-![00](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/00-player-age-breakdown.png)
+![00](./images/00-player-age-breakdown.png)
 
 We can see a significant dip around age 29. There may be some correlation between that and the typical 6 years of team control expiring, but I'm inclined to call that noise in the data. I can't think of a logical reason for it to dip at 29 and then spike up again.
 
 I'm also interested in seeing the trend of WAR by age. I find a scatter plot is usually a good way to start.
 
-![01](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/01-war-vs-age-regressions-3rd.png)
+![01](./images/01-war-vs-age-regressions-3rd.png)
 
-![02](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/02-war-vs-age-regressions-5th.png)
+![02](./images/02-war-vs-age-regressions-5th.png)
 
 The first graph is fit by a 3rd degree polynomial. The 2nd if fit by a 5th degree polynomial.
 
@@ -86,17 +86,17 @@ The first thing to notice is that the Fans project higher WAR essentially across
 
 You might also notice some dots all the way up near 10 WAR. That is Mike Trout, a 22 year-old who is already the best player in baseball. He is an outlier in every sense. We can see what happens to the 3rd degree polynomial is he is removed.
 
-![03](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/03-war-vs-age-regressions-3rd-no-trout.png)
+![03](./images/03-war-vs-age-regressions-3rd-no-trout.png)
 
 It is tough to see the change in the curves. This time, we'll average the Z-Scores of the WARs across the 4 projection systems and plot the curves with and without Trout. 
 
-![04](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/04-war-vs-age-regressions-3rd-no-trout-2.png)
+![04](./images/04-war-vs-age-regressions-3rd-no-trout-2.png)
 
 The red curve follows intuition better. The age 21 players are no longer the highest point on the curve. The curve peaks around age 26 and then starts falling off quickly after age 32. 
 
 Another way to look at this is by grouping by age and looking at the aggregate numbers. Here, I've converted the WAR numbers to Z-scores.
 
-![16](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/16-avg-war-age.png)
+![16](./images/16-avg-war-age.png)
 
 Again, we see the early spike for the age 21 players. The next highest values are for ages 30 and 31, which is them followed all negative values for the rest of the ages. This might coincide with the age 29 dip we saw in the first graph. This is when players become expensive. At age 28 or 29, many mediocre players are fairly cheap. There is definitely an element of "survival of the fittest" in MLB once players get into their 30s. Young players get paid significantly less, and they tend to replace the below average 30 year olds. 
 
@@ -104,39 +104,39 @@ Another way to visualize this is by looking at the proportion of players by age,
 
 The reason I like this graph is because it lets us answer the question "does a disproportionate amount of value come from players at a certain age?" The red step overlay lets us see the overall trend of WAR per player. Again, we see that sharp fall off at age 32.
 
-![17](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/17-proportions.png)
+![17](./images/17-proportions.png)
 
 One oddity here is that the 21 year-olds are consistently among the best, or the best group of players overall, yet the 22 year-olds are not, despite Trout being in their group. Let's break it down and see who is in this group.
 
-![05](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/05-war-young-players.png)
+![05](./images/05-war-young-players.png)
 
 There is one pattern I notice. The 21 year-old players were all elite prospects. The 22 year-olds were top prospects, but aside from Trout, didn't have the same pedigree as the others. 
 
-![06](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/06-war-young-players-24.png)
+![06](./images/06-war-young-players-24.png)
 
 The trend persists for age 23 players as well. From eyeballing it, I suspect that the age 23 players have worse pedigree than the 22 year-olds. I have compiled a list of the maximum prospect ranking on Baseball America's annual top 100 prospects list for each of these players. The players listed at 101 were unranked.
 
-![07](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/07-prospect-status.png)
+![07](./images/07-prospect-status.png)
 
 There is a small sample here, but we can see that the youngest players tend to be elite prospects. The only exceptions are Trout, who has been in MLB since age 20, and Wil Myers. It makes sense, as teams are careful about hurting young players' confidence by bringing them up to the Majors before they are ready. Teams also get control over their young players for 6 years, so they are careful about "starting their clocks" unless those players are truly ready to contribute.
 
 This likely explains why the 21 year old players have higher WAR than the 22 or 23 year olds, who are mostly good prospects who were called up when ready. The obvious exclusion is Trout, who was the best player in baseball at age 20.
 
-![08](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/08-comparison-offense.png)
+![08](./images/08-comparison-offense.png)
 
-![09](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/09-comparison-offense-top10.png)
+![09](./images/09-comparison-offense-top10.png)
 
 I alluded to the need to normalize above, but here is further evidence that the systems project varying levels of offense, especially since we're only looking at a subset MLB players. Once again, it's not surprising that the humans project more offense than the computers. The bottom graph shows only the top 10 players for each system for each stat, and that shows the same pattern.
 
 We can also look at some histograms to get a better sense of the data. Here's an attempt at plotting all histograms together. 
 
-![10](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/10-histograms.png)
+![10](./images/10-histograms.png)
 
 We can see the Fans are shifted over toward the right, meaning more optimistic projections. Oliver, the front, transparent histogram, seems to be bunched tighter than the others.
 
 Perhaps a cleaner way of visualizing this data to the MLE gaussian distribution for each and compare those. This is a cleaner way of visualizing
 
-![12](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/12-gaussians.png)
+![12](./images/12-gaussians.png)
 
 This lets us easily see the fans with the more optimistic projections, and Oliver, with its lower mode, as the more spread out system. 
 
@@ -144,13 +144,13 @@ If we convert everything to Z-Scores, we no longer have to worry about this. Eve
 
 A theory I had going into this is that younger players are harder to project and would have the greatest standard deviations. Below, I have plotted age vs. the standard deviation between the Z-Scores of the 4 WAR projections. The trend line shows a dip around the so-called "prime" of a player's career. With fewer data points to work from for players at the extremes, the projection systems agree less.
 
-![13](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/13-std-age.png)
+![13](./images/13-std-age.png)
 
 We can see who the top 10 most and least volatile players are.
 
-![14](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/14-highest-std.png)
+![14](./images/14-highest-std.png)
 
-![15](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/15-lowest-std.png)
+![15](./images/15-lowest-std.png)
 
 The top 10 smallest standard deviation players are mostly in the 26-28 year old "prime" range. This follows intuition.
 
@@ -160,7 +160,7 @@ There are certain positional stereotypes that I'm interested in looking into. Th
 
 In order to plot these, I had to choose the top 25 players at each position for each stat. In my first attempt at this graph, I plotted all players and noticed that catchers' WAR was much higher than the other players. This is due to some selection bias, where only the better catchers are projected for over 400 plate appearances, whereas many backup infielders or outfielders project for that many. In choosing only the top 25, that evened the field across the positions.
 
-![21](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/21-by-position.png)
+![21](./images/21-by-position.png)
 
 The positions with the best fielders are CF, RF, and SS. The outfielders and SS are the best baserunners. LF, RF, and 1B are clearly the power positions. This does match the classical stereotypes of the players. 
 
@@ -170,28 +170,28 @@ The most valuable positions are 1B and CF. Note that Mike Trout is a CF and that
 
 I'd like to finish by looking at the top 10 players across different statistics. The second graph is also a look at the fall-off among the top 50 players.
 
-![18](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/18-top-10-overall.png)
+![18](./images/18-top-10-overall.png)
 
-![22](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/22-top-fielders.png)
+![22](./images/22-top-fielders.png)
 
-![23](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/23-top-baserunners.png)
+![23](./images/23-top-baserunners.png)
 
-![24](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/24-top-hr.png)
+![24](./images/24-top-hr.png)
 
-![25](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/25-top-sb.png)
+![25](./images/25-top-sb.png)
 
-![26](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/26-top-woba.png)
+![26](./images/26-top-woba.png)
 
-![27](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/27-top-obp.png)
+![27](./images/27-top-obp.png)
 
-![28](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/28-top-slg.png)
+![28](./images/28-top-slg.png)
 
-![29](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/29-top-so.png)
+![29](./images/29-top-so.png)
 
 
 And finally, because every baseball fan loves homeruns, the top 50 by HR:
 
-![20](https://raw.githubusercontent.com/joshplotkin/edav/gh-pages/assets/jsp2014/blog2/20-top-50-by-HR.png)
+![20](./images/20-top-50-by-HR.png)
 
 
 ```python
