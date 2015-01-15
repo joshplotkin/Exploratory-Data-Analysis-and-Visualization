@@ -24,7 +24,7 @@ I aggregated the raw data from the following sources:
 * Team revenue, value, and operating profit (http://www.forbes.com/mlb-valuations/list/)
 * Payroll by year (http://www.baseballprospectus.com/compensation/cots/)
 * Player salaries by team by year (http://www.baseballprospectus.com/compensation/cots/)
-* [R code for ggplot2](./images/blogpost1.R). (code used is all code above line 500)
+* [R code for ggplot2](./blogpost1.R). (code used is all code above line 500)
 * [rar file with all csv files I created](./images/baseballdata.rar).
 
 Upon looking at and thinking about the data, I decided I would start with the bigger picture of aggregate team metrics, and then drill into player compensation, positions, and the type of analysis Wendy did in the original article. Due to the large amount of data I collected, and trying to explore the data as much as possible, I will save that analysis for my next blog post.
